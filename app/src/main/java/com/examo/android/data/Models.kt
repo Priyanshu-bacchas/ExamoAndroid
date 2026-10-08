@@ -1,0 +1,10 @@
+package com.examo.android.data
+data class AuthUser(val id:Int=0,val fullName:String="",val studentId:String?=null,val email:String="",val role:String="Student")
+data class AuthResponse(val token:String,val user:AuthUser)
+data class LoginRequest(val identifier:String,val password:String)
+data class RegisterRequest(val fullName:String,val studentId:String,val email:String,val password:String)
+data class Exam(val id:Int,val examName:String,val examDate:String?,val status:String)
+data class ExamForm(val id:Int,val examName:String,val registerStartDate:String,val registerEndDate:String,val link:String?,val status:String)
+data class Preparation(val id:Int,val examName:String,val syllabus:String?,val status:String)
+data class Subject(val id:Int,val subjectName:String,val status:String,val materials:String?,val lectures:Int,val pdf:String?,val link:String?)
+data class Schedule(val id:Int,val subject:String,val scheduleDate:String,val startTime:String,val endTime:String?,val description:String?,val lecture:Int?)
